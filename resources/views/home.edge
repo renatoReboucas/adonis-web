@@ -1,0 +1,14 @@
+@layout('main')
+@section('content')
+
+<h1>home</h1>
+@if(title)
+  {{title}}
+@endif
+<br>
+@loggedIn
+  You are logged in!
+@else
+  <a href="#">Click here</a> to login.
+@endloggedIn
+@endsection

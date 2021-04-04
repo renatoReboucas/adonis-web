@@ -1,0 +1,26 @@
+@layout('main')
+@section('content')
+<h1 class="mb-3">New Task</h1>
+
+<form action="{{route('/add')}}" method="POST">
+  {{ csrfField() }}
+<div class="mb-3">
+  <label for="">Title</label>
+  <input class="form-control is-invalid" type="text" name="title"
+   placeholder="your title" value="">
+  <div class="invalid-feedback">
+    error!
+  </div>
+</div>
+<div class="mb-3">
+  <label for="">Body</label>
+  <textarea class="form-control is-invalid" name="body" ></textarea>
+  <div class="invalid-feedback">
+    error!
+  </div>
+</div>
+
+<button class="btn btn-warning" type="submit">New task</button>
+</form>
+
+@endsection
